@@ -1,0 +1,15 @@
+/* SearchTypes */
+
+// seatchType
+#define SEARCH_WITH_STRING		0
+#define SEARCH_WITH_URL			1
+#define SEARCH_WITH_FEED		2
+#define SEARCH_WITH_CATEGORY	3
+#define SEARCH_WITH_ITEMS		4
+#define SEARCH_WITH_PLAYLIST	5
+#define SEARCH_WITH_PLAYHISTORY	6
+
+// seatchSubType of SEARCH_WITH_URL
+#define SEARCH_WITH_URL_RELATED	0
+#define SEARCH_WITH_URL_AUTHOR	1
+

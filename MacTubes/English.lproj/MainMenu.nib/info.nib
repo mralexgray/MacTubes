@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IBDocumentLocation</key>
+	<string>118 43 563 624 0 0 1024 746 </string>
+	<key>IBEditorPositions</key>
+	<dict>
+		<key>1002</key>
+		<string>95 627 65 32 0 0 1024 746 </string>
+		<key>1160</key>
+		<string>420 433 137 111 0 0 1024 746 </string>
+		<key>1560</key>
+		<string>136 671 65 32 0 0 1024 746 </string>
+		<key>1644</key>
+		<string>37 658 65 32 0 0 1024 746 </string>
+		<key>1695</key>
+		<string>85 665 65 32 0 0 1024 746 </string>
+		<key>1702</key>
+		<string>116 645 65 32 0 0 1024 746 </string>
+		<key>2122</key>
+		<string>98 629 65 32 0 0 1024 746 </string>
+		<key>2628</key>
+		<string>85 616 70 49 0 0 1024 746 </string>
+		<key>2739</key>
+		<string>31 236 107 137 0 0 1024 746 </string>
+		<key>2766</key>
+		<string>423 335 65 32 0 0 1024 746 </string>
+		<key>2782</key>
+		<string>0 646 65 32 0 0 1024 746 </string>
+		<key>288</key>
+		<string>253 218 137 204 0 0 1024 746 </string>
+		<key>29</key>
+		<string>28 603 472 44 0 0 1024 746 </string>
+		<key>2926</key>
+		<string>693 220 104 80 0 0 1024 746 </string>
+		<key>305</key>
+		<string>172 213 137 173 0 0 1024 746 </string>
+		<key>434</key>
+		<string>47 252 169 173 0 0 1024 746 </string>
+		<key>509</key>
+		<string>23 528 65 32 0 0 1024 746 </string>
+		<key>512</key>
+		<string>23 528 65 32 0 0 1024 746 </string>
+		<key>784</key>
+		<string>299 528 104 80 0 0 1024 746 </string>
+		<key>851</key>
+		<string>101 639 71 80 0 0 1024 746 </string>
+		<key>913</key>
+		<string>351 363 142 118 0 0 1024 746 </string>
+		<key>925</key>
+		<string>330 222 81 130 0 0 1024 746 </string>
+	</dict>
+	<key>IBFramework Version</key>
+	<string>489.0</string>
+	<key>IBLockedObjects</key>
+	<array>
+		<integer>863</integer>
+		<integer>861</integer>
+		<integer>215</integer>
+		<integer>862</integer>
+		<integer>859</integer>
+		<integer>858</integer>
+		<integer>1723</integer>
+		<integer>214</integer>
+		<integer>652</integer>
+		<integer>654</integer>
+		<integer>234</integer>
+		<integer>1844</integer>
+		<integer>1380</integer>
+		<integer>1748</integer>
+		<integer>1714</integer>
+		<integer>1711</integer>
+		<integer>232</integer>
+		<integer>231</integer>
+		<integer>283</integer>
+		<integer>668</integer>
+		<integer>265</integer>
+		<integer>665</integer>
+		<integer>281</integer>
+	</array>
+	<key>IBLockedTabItems</key>
+	<array>
+		<integer>1803</integer>
+		<integer>2114</integer>
+		<integer>519</integer>
+		<integer>2620</integer>
+		<integer>1712</integer>
+		<integer>1845</integer>
+		<integer>1724</integer>
+		<integer>2859</integer>
+	</array>
+	<key>IBSystem Version</key>
+	<string>8S165</string>
+	<key>IBUsesTextArchiving</key>
+	<true/>
+</dict>
+</plist>

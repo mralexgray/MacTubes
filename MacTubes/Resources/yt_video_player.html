@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	<!--
+	body {
+		border:0;
+		margin:0;
+		padding:0;
+		text-align:center;
+		overflow:hidden;
+	}
+
+	.video-content.loading{
+		background:black url("..loading_image_url") no-repeat scroll center center;
+	}
+	-->
+</style>
+<script type="text/javascript">
+<!--
+var webPlayerView = window.webPlayerView;
+var video;
+var autoplay = ..autoplay;
+var playRate = 1.0;
+var timer1;
+
+//
+// init
+//
+function init() {
+
+	sendLoadState(0, "init");
+	video = document.getElementById("video");
+	
+	// error
+	video.addEventListener("error", function() {
+		var errorCode = video.error.code;
+		switch (errorCode) {
+			case MediaError.MEDIA_ERROR_ABORTED:
+				sendErrorMessage(errorCode, "Failed loading video data.");
+				break;
+			case MediaError.MEDIA_ERROR_NETWORK:
+				sendErrorMessage(errorCode, "A network error caused.");
+				break;
+			case MediaError.MEDIA_ERROR_DECODE:
+				sendErrorMessage(errorCode, "Failed decodinf video data.");
+				break;
+			case MediaError.MEDIA_ERROR_SRC_NOT_SUPPORTED:
+				sendErrorMessage(errorCode, "Unsupported file.");
+				break;
+			default:
+				sendErrorMessage(errorCode, "An unknown error occurred.");
+		}
+		sendLoadState(9, "error");
+	});
+
+	// canplay
+	video.addEventListener("canplay", function() {
+
+		// set volume
+		var vol =  webPlayerView.videoVolume();
+		setVolume(vol);
+		// start
+		if(autoplay == 1){
+			play();
+		}
+		sendLoadState(2, "canplay");
+		sendTimeState();
+	}, true);
+
+	// canplaythrough
+	video.addEventListener("canplaythrough", function() {
+		sendLoadState(3, "canplaythrough");
+	}, true);
+
+	// play
+	video.addEventListener("play", function() {
+		// set rate
+		setRate(playRate);
+		startCount();
+		sendPlayState(1, "play");
+	}, true);
+
+	// pause
+	video.addEventListener("pause", function() {
+		pauseCount();
+		sendPlayState(2, "pause");
+	}, true);
+
+	// ended
+	video.addEventListener("ended", function() {
+		pauseCount();
+		sendPlayState(0, "ended");
+	}, true);
+
+	// seeked
+	video.addEventListener("seeked", function() {
+//		sendControlState(1, "seeked");
+		// for repeat from start
+		if(currentTime() == 0 && playing() == true){
+			setRate(playRate);
+			sendPlayState(1, "play");
+			startCount();
+		}
+		sendTimeState();
+	}, true);
+
+	// volumechange
+	video.addEventListener("volumechange", function() {
+//		sendControlState(2, "volumechange");
+	}, true);
+
+	// load
+	video.src = "..video_url";
+	video.type = "..video_type";
+	video.load();
+}
+//
+// controls
+//
+function play() {
+	video.play();
+}
+function pause() {
+	video.pause();
+}
+function restart() {
+	setCurrentTime(0);
+	play();
+}
+
+//
+// setter
+//
+function setControls(state) {
+	video.controls = state;
+}
+function setVolume(volume) {
+	video.volume = volume;
+}
+function setRate(rate) {
+	video.playbackRate = rate;
+	playRate = rate;
+}
+function setCurrentTime(sec) {
+	video.currentTime = sec;
+}
+//
+// getter
+//
+function rate() {
+	return video.playbackRate;
+}
+function currentTime() {
+	return Math.round(video.currentTime);
+}
+function duration() {
+	return Math.round(video.duration);
+}
+function playing() {
+	return !video.paused;
+}
+function videoWidth() {
+	return video.videoWidth;
+}
+function videoHeight() {
+	return video.videoHeight;
+}
+function hasVideo() {
+	if(video){
+		return true;
+	}else{
+		return false;
+	}
+}
+//
+// timer
+//
+function startCount() {
+	timer1 = window.setInterval(function() {
+		if(video.ended != true) {
+			sendTimeState();
+		} else {
+			window.clearInterval(timer1);
+		}
+	}, 1000);
+}
+function pauseCount() {
+	sendTimeState();
+	window.clearInterval(timer1);
+}
+//
+// send response
+//
+function sendLoadState(state, string) {
+	webPlayerView.receiveLoadState(state, string);
+}
+function sendPlayState(state, string) {
+	webPlayerView.receivePlayState(state, string);
+}
+function sendControlState(state, string) {
+	webPlayerView.receiveControlState(state, string);
+}
+function sendTimeState() {
+	webPlayerView.receiveTimeState(currentTime(), duration());
+}
+function sendErrorMessage(state, string) {
+	webPlayerView.receiveErrorMessage(state, string);
+}
+function sendLogMessage(string) {
+	webPlayerView.receiveLogMessage(string);
+}
+-->
+</script>
+</head>
+<body bgcolor=black text=white onload="init();">
+	<div class="video-content loading">
+		<video id="video" width="100%" height="100%" controls autobuffer>
+			Sorry. Your browser does not support video tag.
+		</video>
+	</div>
+</body>
+</html>

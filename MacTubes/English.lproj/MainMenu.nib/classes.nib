@@ -1,0 +1,694 @@
+{
+    IBClasses = (
+        {
+            CLASS = BoxSelectArraylist; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {targetArrayController = NSArrayController; }; 
+            SUPERCLASS = NSBox; 
+        }, 
+        {CLASS = ButtonForContextMenu; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = ButtonForMenu; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = ButtonFullScreen; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {CLASS = ButtonPlayMenu; LANGUAGE = ObjC; SUPERCLASS = ButtonForMenu; }, 
+        {CLASS = ButtonPlayMovie; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {
+            ACTIONS = {changePlayRepeat = id; }; 
+            CLASS = ButtonPlayRepeat; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSButton; 
+        }, 
+        {CLASS = ButtonPlayVideo; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {
+            CLASS = ButtonSelectArraylist; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {targetArrayController = NSArrayController; }; 
+            SUPERCLASS = NSButton; 
+        }, 
+        {
+            ACTIONS = {selectPlayItem = id; }; 
+            CLASS = ButtonSelectInfoItem; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSButton; 
+        }, 
+        {CLASS = ButtonSelectPlayItem; LANGUAGE = ObjC; SUPERCLASS = NSButton; }, 
+        {
+            CLASS = CMRelatedlistHeader; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {tbvRelatedlist = RelatedlistTableView; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            CLASS = CMSearchlistHeader; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {tbvSearchlist = SearchlistTableView; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {changeRowHeight = id; }; 
+            CLASS = CommentlistTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cmCommentlist = NSMenu; 
+                commentlistArrayController = NSArrayController; 
+                sliderRowHeight = NSSlider; 
+            }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {CLASS = ControlSlider; LANGUAGE = ObjC; SUPERCLASS = NSSlider; }, 
+        {
+            ACTIONS = {closeWindow = id; openWindow = id; }; 
+            CLASS = ControllerWindow; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            ACTIONS = {
+                cancelAllDownloadItem = id; 
+                cancelDownloadItem = id; 
+                clearFinishedItem = id; 
+                copyItemToPasteboard = id; 
+                downloadItem = id; 
+                openDownloadWindow = id; 
+                restartDownloadItem = id; 
+                searchDownloadItem = id; 
+            }; 
+            CLASS = DownloadManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                downloadWindow = NSWindow; 
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                tbvDownloadlist = NSTableView; 
+                txtStatus = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = DownloadlistTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {cmDownloadlist = NSMenu; downloadManager = id; }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = FileFormatTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {cmFormatlist = NSMenu; viewFileFormat = id; }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            ACTIONS = {"" = id; playItem = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                changeFullScreen = id; 
+                changeFullScreenWithHideController = id; 
+                changeTopScreen = id; 
+            }; 
+            CLASS = FullScreenWindow; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {CLASS = HeadSplitView; LANGUAGE = ObjC; SUPERCLASS = NSSplitView; }, 
+        {CLASS = ImageBindController; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {exportPlaylist = id; importPlaylist = id; }; 
+            CLASS = ImpExpManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                olvPlaylist = PlaylistOutlineView; 
+                playlistTreeController = NSTreeController; 
+                tbArrayController = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {changeSearchFormat = id; searchWithField = id; }; 
+            CLASS = ItemSearchField; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {targetArrayController = NSArrayController; }; 
+            SUPERCLASS = NSSearchField; 
+        }, 
+        {
+            CLASS = LaunchServicesManager; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlayer = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {openLogWindow = id; }; 
+            CLASS = LogStatusController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {logWindow = NSWindow; txtLogString = NSTextView; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {saveAction = id; }; 
+            CLASS = "MacTubes_AppDelegate"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                downloadManager = id; 
+                launchServicesManager = id; 
+                olvPlaylist = NSOutlineView; 
+                window = NSWindow; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {changeTopScreen = id; }; 
+            CLASS = MenuItemAlwaysOnTop; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {playerWindow = FullScreenWindow; }; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {addCategorylist = id; }; 
+            CLASS = MenuItemCategory; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlaylist = id; }; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {changeCountryCode = id; }; 
+            CLASS = MenuItemCountryCode; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            CLASS = MenuItemFeed; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlaylist = id; }; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            CLASS = MenuItemFileDownload; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {menuFileDownload = NSMenu; menuSelectFileDownload = NSMenu; }; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {clearItem = id; playItem = id; }; 
+            CLASS = MenuItemPlayHistory; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {tbArrayController = id; viewHistory = id; viewPlayer = id; }; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {changePlayRepeat = id; }; 
+            CLASS = MenuItemPlayRepeat; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {changePlayVolume = id; nullAction = id; }; 
+            CLASS = MenuItemPlayVolume; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {changePlayerType = id; nullAction = id; }; 
+            CLASS = MenuItemPlayerType; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            CLASS = MenuItemPlaylist; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {tbArrayController = id; viewTarget = id; }; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {changeVideoSizeScale = id; }; 
+            CLASS = MenuItemVideoSizeScale; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSMenuItem; 
+        }, 
+        {
+            ACTIONS = {downloadItem = id; nullAction = id; openVideoFormatItem = id; }; 
+            CLASS = MenuSelectFileDownload; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlayer = id; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {changeFileFormatNo = id; nullAction = id; openPrefsWindow = id; }; 
+            CLASS = MenuSelectFileFormatNo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlayer = id; viewPrefs = id; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {changePageIndex = id; nullAction = id; }; 
+            CLASS = MenuSelectPageIndex; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewTargetSearch = id; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {changePlaylistSort = id; nullAction = id; }; 
+            CLASS = MenuSelectPlaylistSort; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {btnMenu = NSButton; viewTargetSearch = id; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {changeQuerySort = id; nullAction = id; }; 
+            CLASS = MenuSelectQuerySort; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {btnMenu = NSButton; viewTargetSearch = id; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {
+            ACTIONS = {changeQueryTimePeriod = id; nullAction = id; }; 
+            CLASS = MenuSelectQueryTimePeriod; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {btnMenu = NSButton; viewTargetSearch = id; }; 
+            SUPERCLASS = NSMenu; 
+        }, 
+        {CLASS = NSSegmentedControl; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = PWPolishedSlider; LANGUAGE = ObjC; SUPERCLASS = NSSlider; }, 
+        {
+            CLASS = PlayHistoryTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cmPlayHistory = NSMenu; 
+                playhistoryArrayController = NSArrayController; 
+                viewHistory = id; 
+            }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = PlaylistOutlineView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cmPlaylist = NSMenu; 
+                playlistTreeController = NSTreeController; 
+                tbArrayController = id; 
+                viewPlaylist = id; 
+            }; 
+            SUPERCLASS = NSOutlineView; 
+        }, 
+        {
+            ACTIONS = {changeWindowTheme = id; }; 
+            CLASS = PolishedWindow; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSWindow; 
+        }, 
+        {
+            ACTIONS = {changeCountryCode = id; }; 
+            CLASS = PopUpButtonCountryCode; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSPopUpButton; 
+        }, 
+        {
+            ACTIONS = {changeFeedName = id; }; 
+            CLASS = PopUpButtonFeedName; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewMainSearch = id; }; 
+            SUPERCLASS = NSPopUpButton; 
+        }, 
+        {CLASS = PopUpButtonFileFormat; LANGUAGE = ObjC; SUPERCLASS = NSPopUpButton; }, 
+        {
+            ACTIONS = {changeLabelColor = id; }; 
+            CLASS = PopUpButtonLabelColor; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSPopUpButton; 
+        }, 
+        {
+            CLASS = PreviewImageView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {searchlistArrayController = NSArrayController; viewMainSearch = id; }; 
+            SUPERCLASS = NSImageView; 
+        }, 
+        {
+            CLASS = QTPlayerView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlayer = id; }; 
+            SUPERCLASS = QTMovieView; 
+        }, 
+        {
+            ACTIONS = {changeRowHeight = id; }; 
+            CLASS = RelatedlistTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cmRelatedlist = NSMenu; 
+                cmRelatedlistHeader = NSMenu; 
+                relatedlistArrayController = NSArrayController; 
+                sliderRowHeight = NSSlider; 
+                viewRelatedSearch = id; 
+            }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {CLASS = RoundedView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {
+                clickItem = id; 
+                doubleClickItem = id; 
+                enableClickToRenameByTimer = id; 
+                renameByTimer = id; 
+            }; 
+            CLASS = SearchFilterTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {searchFilterArrayController = NSArrayController; viewPrefs = id; }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            ACTIONS = {changeCellSize = id; changeMatrix = id; changeMatrixCols = id; }; 
+            CLASS = SearchMatrix; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cmSearchlist = NSMenu; 
+                searchlistArrayController = NSArrayController; 
+                viewMainSearch = id; 
+            }; 
+            SUPERCLASS = NSMatrix; 
+        }, 
+        {CLASS = SearchMatrixCell; LANGUAGE = ObjC; SUPERCLASS = NSImageCell; }, 
+        {
+            ACTIONS = {changeRowHeight = id; }; 
+            CLASS = SearchlistTableView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cmSearchlist = NSMenu; 
+                cmSearchlistHeader = NSMenu; 
+                searchlistArrayController = NSArrayController; 
+                sliderRowHeight = NSSlider; 
+                viewMainSearch = id; 
+            }; 
+            SUPERCLASS = NSTableView; 
+        }, 
+        {
+            CLASS = TBArrayController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "MacTubes_AppDelegate" = id; 
+                itemlistArrayController = NSArrayController; 
+                playhistoryArrayController = NSArrayController; 
+                playlistTreeController = NSTreeController; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = TextFieldFileFormatNo; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = TextFieldPlayerType; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = TextFieldTimeStatus; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {CLASS = TextFieldVideoTitle; LANGUAGE = ObjC; SUPERCLASS = NSTextField; }, 
+        {
+            ACTIONS = {copyLinkToPasteboard = id; downloadItem = id; openFileFormatWindow = id; }; 
+            CLASS = ViewFileFormat; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnDownload = NSButton; 
+                downloadManager = id; 
+                fileFormatWindow = NSWindow; 
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                tbvFileFormat = NSTableView; 
+                txtVideoTitle = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addItemToPlaylist = id; 
+                openHistoryWindow = id; 
+                playItem = id; 
+                removeAllItems = id; 
+                removeItem = id; 
+            }; 
+            CLASS = ViewHistory; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnPlay = NSButton; 
+                historyWindow = NSWindow; 
+                playhistoryArrayController = NSArrayController; 
+                tbArrayController = id; 
+                viewPlayer = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                changeSearchPage = id; 
+                copyCommentToPasteboard = id; 
+                reloadSearchPage = id; 
+                searchItemComments = id; 
+            }; 
+            CLASS = ViewItemComment; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnPageNext = NSButton; 
+                btnPagePrev = NSButton; 
+                btnReload = NSButton; 
+                commentlistArrayController = NSArrayController; 
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                txtSearchResult = NSTextField; 
+                viewItemInfo = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                copyInfoToPasteboard = id; 
+                openAuthorsProfileWithBrowser = id; 
+                openInfoWindow = id; 
+                openWatchWithBrowser = id; 
+                playItem = id; 
+            }; 
+            CLASS = ViewItemInfo; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnCopy = NSButton; 
+                btnOpenAuthorPage = NSButton; 
+                btnOpenVideoURL = NSButton; 
+                imagePreview = NSImageView; 
+                infoWindow = NSWindow; 
+                relatedlistArrayController = NSArrayController; 
+                searchlistArrayController = NSArrayController; 
+                tabViewComment = NSTabView; 
+                txtAuthor = NSTextField; 
+                txtDescription = NSTextView; 
+                txtItemInfo = NSTextView; 
+                txtTitle = NSTextField; 
+                txtUserCommentResults = NSTextField; 
+                txtWatchURL = NSTextField; 
+                viewItemComment = id; 
+                viewPlayer = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addItemToSearchlist = id; 
+                changeSearchPage = id; 
+                changeTabViewSearchResult = id; 
+                copyItemToPasteboard = id; 
+                downloadItem = id; 
+                openAuthorsProfileWithBrowser = id; 
+                openContentWithBrowser = id; 
+                openItemInfo = id; 
+                openVideoFormatItem = id; 
+                openWatchWithBrowser = id; 
+                playItem = id; 
+                reloadSearchPage = id; 
+                removeItem = id; 
+                removeItemFromPlayHistory = id; 
+                removeItemFromPlaylist = id; 
+                searchAuthorsItem = id; 
+                searchPlayHistoryItem = id; 
+                searchRelatedItem = id; 
+                searchWithKeyword = id; 
+            }; 
+            CLASS = ViewMainSearch; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnPageNext = NSButton; 
+                btnPagePrev = NSButton; 
+                btnPlay = NSButton; 
+                btnPlaylistOrder = NSButton; 
+                btnQueryOrder = NSButton; 
+                btnQueryTimePeriod = NSButton; 
+                btnTabViewSearchGrid = NSButton; 
+                btnTabViewSearchTable = NSButton; 
+                downloadManager = id; 
+                imgPreview = NSImageView; 
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                mainWindow = NSWindow; 
+                pbtnFeedName = NSPopUpButton; 
+                searchlistArrayController = NSArrayController; 
+                spvHead = NSSplitView; 
+                spvMain = NSSplitView; 
+                spvNavi = NSSplitView; 
+                tabViewSearchHead = NSTabView; 
+                tabViewSearchResult = NSTabView; 
+                tabViewSearchSlider = NSTabView; 
+                tbArrayController = id; 
+                txtSearchField = NSSearchField; 
+                txtSearchResult = NSTextField; 
+                viewFileFormat = id; 
+                viewItemInfo = id; 
+                viewPlayer = id; 
+                viewRelatedSearch = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {closeControllerWindow = id; openControllerWindow = id; }; 
+            CLASS = ViewPlayController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controllerWindow = ControllerWindow; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                changeItem = id; 
+                closeEnterURLWindow = id; 
+                copyItemToPasteboard = id; 
+                downloadItem = id; 
+                openAuthorsProfileWithBrowser = id; 
+                openContentWithBrowser = id; 
+                openEnterURLWindow = id; 
+                openItemInfo = id; 
+                openPlayerViewWithURL = id; 
+                openPlayerWindow = id; 
+                openVideoFormatItem = id; 
+                openWatchWithBrowser = id; 
+                playItem = id; 
+                replayItem = id; 
+                searchAuthorsItem = id; 
+                searchRelatedItem = id; 
+            }; 
+            CLASS = ViewPlayer; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnFileFormatNo = NSButton; 
+                downloadManager = id; 
+                enterURLWindow = NSWindow; 
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                playerWindow = NSWindow; 
+                playhistoryArrayController = NSArrayController; 
+                qtPlayerView = QTPlayerView; 
+                relatedlistArrayController = NSArrayController; 
+                searchlistArrayController = NSArrayController; 
+                sliderPlayVolume = NSSlider; 
+                tabViewPlayer = NSTabView; 
+                tbArrayController = id; 
+                txtURL = NSTextField; 
+                viewFileFormat = id; 
+                viewItemInfo = id; 
+                viewRelatedSearch = id; 
+                webPlayerView = WebPlayerView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addFeedlist = id; 
+                addFolder = id; 
+                addPlaylist = id; 
+                addSearchlist = id; 
+                deselectItem = id; 
+                editItem = id; 
+                exportItem = id; 
+                nullAction = id; 
+                openAuthorsProfileWithBrowser = id; 
+                removeItem = id; 
+                searchItem = id; 
+            }; 
+            CLASS = ViewPlaylist; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnAdd = NSButton; 
+                btnRemove = NSButton; 
+                impExpManager = id; 
+                mainWindow = NSWindow; 
+                olvPlaylist = PlaylistOutlineView; 
+                playlistTreeController = NSTreeController; 
+                tbArrayController = id; 
+                viewMainSearch = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                addSearchFilterList = id; 
+                changeWindowTheme = id; 
+                openHelpWindow = id; 
+                openPrefsWindow = id; 
+                removeSearchFilterList = id; 
+                selectDownloadFolderPath = id; 
+            }; 
+            CLASS = ViewPrefs; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                downloadWindow = NSWindow; 
+                fileFormatWindow = NSWindow; 
+                helpWindow = NSWindow; 
+                historyWindow = NSWindow; 
+                infoWindow = NSWindow; 
+                logWindow = NSWindow; 
+                mainWindow = NSWindow; 
+                playerWindow = NSWindow; 
+                prefsWindow = NSWindow; 
+                relatedWindow = NSWindow; 
+                searchFilterArrayController = NSArrayController; 
+                tabViewPrefs = NSTabView; 
+                tbvSearchFilter = NSTableView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                changeSearchPage = id; 
+                copyItemToPasteboard = id; 
+                downloadItem = id; 
+                openAuthorsProfileWithBrowser = id; 
+                openContentWithBrowser = id; 
+                openItemInfo = id; 
+                openRelatedWindow = id; 
+                openVideoFormatItem = id; 
+                openWatchWithBrowser = id; 
+                playItem = id; 
+                searchAuthorsItem = id; 
+                searchRelatedItem = id; 
+            }; 
+            CLASS = ViewRelatedSearch; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                btnPageNext = NSButton; 
+                btnPagePrev = NSButton; 
+                btnPlay = NSButton; 
+                btnQueryOrder = NSButton; 
+                downloadManager = id; 
+                indProc = NSProgressIndicator; 
+                logStatusController = id; 
+                relatedWindow = NSWindow; 
+                relatedlistArrayController = NSArrayController; 
+                tbArrayController = id; 
+                txtSearchResult = NSTextField; 
+                viewFileFormat = id; 
+                viewItemInfo = id; 
+                viewPlayer = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = WebPlayerView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {viewPlayer = id; }; 
+            SUPERCLASS = WebView; 
+        }, 
+        {
+            CLASS = "_NSArrayControllerTreeNode"; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

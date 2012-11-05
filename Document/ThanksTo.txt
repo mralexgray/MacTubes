@@ -1,0 +1,26 @@
+Thanks to
+
+gdata-objectivec-client tutorial by 
+	- dan sinclair / MyTube (http://everburning.com/news/tag/mytube/)
+
+PolishedWindow code by 
+	- Matt Gemmell / TunesWindow (http://mattgemmell.com/)
+
+PWPolishedSlider code by
+	- Collin Henderson / Cocoa Beach (http://codebeach.org/code/show/53)
+
+Drag & Drop image code by
+	- tsawada2 / tsawada2 Weblog
+	(http://homepage.mac.com/tsawada2/iblog/C2046055098/E1976883117/index.html)
+
+Manageing of downloads code by
+	- Vienna
+	(http://vienna-rss.svn.sourceforge.net/viewvc/vienna-rss/)
+
+HD Video Search script by
+	- yager / Youtube HD Visualize for Greasemonkey
+	(http://userscripts.org/scripts/show/37874)
+
+Supporting of open command code by
+	- drikin / tne mac way
+	(http://drikin.com/)
